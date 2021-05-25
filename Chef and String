@@ -1,0 +1,38 @@
+// By Chandramani Kumar
+// Keep moving and must be simple bro!!!!!
+// Espérons le meilleur mais préparez-vous au pire 😎
+
+
+Cpp code :
+
+#include<bits/stdc++.h>
+#include <iostream>
+
+using namespace std;
+typedef long long ll;
+int main()
+{
+    ll t;
+    cin>>t;
+    string s;
+    while(t--)
+    {
+        
+        cin>>s;
+        ll i,j,k;
+        k=0;
+        j=s.size();
+        for(i=0;i<j-1;i++)
+        {
+         if((s[i]=='x'&&s[i+1]=='y')||(s[i]=='y'&&s[i+1]=='x'))
+            {
+                k++;
+                i++;
+            }
+        }
+        
+        cout<<k<<endl;
+    }
+  
+    return 0;
+}
