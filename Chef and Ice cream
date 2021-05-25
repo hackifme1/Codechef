@@ -1,0 +1,83 @@
+// By Chandramani Kumar
+// Keep moving and must be simple bro!!!!!
+// Espérons le meilleur mais préparez-vous au pire 😎
+
+
+Cpp code :
+
+#include<bits/stdc++.h>
+using namespace std;
+typedef long long ll;
+int main()
+{
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll n;
+        cin>>n;
+        ll a[n];
+        ll i,j=1,k=0,l=0;
+        for(i=0;i<n;i++)
+        {
+            cin>>a[i];
+            
+        }
+        
+        if(a[0]>5)
+        cout<<"NO"<<endl;
+        
+        else
+        {
+            for(i=1;i<n;i++)
+            {
+                if(a[i]==5)
+                {
+                    k++;
+                    j++;
+                }
+                
+                if(a[i]==10)
+                {
+                    if(j>=1)
+                    {
+                        k++;
+                        j--;
+                        l++;
+                    }
+                    
+                    else 
+                    break;
+                }
+                
+                if(a[i]==15)
+                {
+                    if(l>=1)
+                    {
+                        k++;
+                        l--;
+                    }
+                    
+                    else if(j>=2)
+                    {
+                        k++;
+                        j=j-2;
+                    }
+                    
+                    else 
+                    break;
+                }
+                
+            }
+            
+             if(k==n-1)
+            cout<<"YES"<<endl;
+            else
+            cout<<"NO"<<endl;
+            
+        }
+        
+    }
+    
+    return 0;
+}
